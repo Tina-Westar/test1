@@ -3,6 +3,9 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+<section class="container">
+  <Header/>
+  <router-view/>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -12,7 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <Test />
+</section>
 </template>
 
 <style scoped>
@@ -28,3 +31,9 @@ import HelloWorld from './components/HelloWorld.vue'
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+<script>
+import Header from './components/Header.vue';
+export default {
+  components: { Header },
+};
+</script>
